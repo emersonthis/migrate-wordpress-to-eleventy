@@ -1,11 +1,8 @@
 log
 tmp
-db/*.sqlite3
-nbproject/private
-bin
 .DS_Store
 *.sublime-project
 *.sublime-workspace
-.sass-cache
-wp-content/uploads/*
 node_modules
+output/*
+!output/.empty

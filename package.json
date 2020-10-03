@@ -1,0 +1,19 @@
+{
+  "name": "wp-migrate-to-eleventy",
+  "version": "0.0.1",
+  "description": "Converts the XML export from WordPress into markdown files for Eleventy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./convert.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  },
+  "dependencies": {
+    "turndown": "^6.0.0",
+    "xml2js": "^0.4.23"
+  }
+}
