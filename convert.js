@@ -18,7 +18,16 @@ const posts = json.rss.channel[0].item;
 for (let i=0; i<posts.length; i++) {
 	const post = posts[i];
 
-	let fileString = `---\ntitle: ${post.title}\n---\n\n`;
+	let fileString = `---\ntitle: "${post.title}"\n`;
+
+	fileString += 'tags:\n';
+
+	post.category.map( cat => {
+		if (cat._ !== 'Uncategorized') {
+			fileString += `  - "${cat._}"\n`;
+		}
+	});
+	fileString += `---\n\n`;
 
 	const htmlContent = post['content:encoded'][0];
 	fileString += turndownService.turndown(htmlContent);
