@@ -9,6 +9,7 @@ Converts the XML export from WordPress into markdown files for Eleventy
 - [ ] Does not yet migrate images
 - [ ] Does not handle excerpts
 - [ ] Does not handle permalinks
+- [ ] Properly escape titles with double quotes in them
 
 ## Installation
 

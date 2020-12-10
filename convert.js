@@ -20,13 +20,18 @@ for (let i=0; i<posts.length; i++) {
 
 	let fileString = `---\ntitle: "${post.title}"\n`;
 
-	fileString += 'tags:\n';
+	let tagString = '';
 
 	post.category.map( cat => {
 		if (cat._ !== 'Uncategorized') {
-			fileString += `  - "${cat._}"\n`;
+			tagString += `  - "${cat._}"\n`;
 		}
 	});
+
+	if (tagString.length) {
+		fileString += 'tags:\n' + tagString;
+	}
+
 	fileString += `---\n\n`;
 
 	const htmlContent = post['content:encoded'][0];
